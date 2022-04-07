@@ -1,11 +1,69 @@
 package com.example.flags
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatActivity
+import com.example.flags.R.id
+import com.example.flags.R.layout
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var llFlagList: LinearLayout
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(layout.activity_main)
+        initViews()
+        inflateViews()
     }
+
+    private fun initViews() {
+        llFlagList = findViewById(id.llMain)
+    }
+
+    private fun inflateViews() {
+        val flagsList = mutableListOf<View>()
+        flagsList.add(
+            LayoutInflater.from(this)
+                .inflate(R.layout.austria_flag, llFlagList, false)
+        )
+        flagsList.add(
+            LayoutInflater.from(this)
+                .inflate(R.layout.colombia_flag, llFlagList, false)
+        )
+        flagsList.add(
+            LayoutInflater.from(this)
+                .inflate(R.layout.denmark_flag, llFlagList, false)
+        )
+        flagsList.add(
+            LayoutInflater.from(this)
+                .inflate(R.layout.italy_flag, llFlagList, false)
+        )
+        flagsList.add(
+            LayoutInflater.from(this)
+                .inflate(R.layout.madagascar_flag, llFlagList, false)
+        )
+        flagsList.add(
+            LayoutInflater.from(this)
+                .inflate(R.layout.poland_flag, llFlagList, false)
+        )
+        flagsList.add(
+            LayoutInflater.from(this)
+                .inflate(R.layout.switzerland_flag, llFlagList, false)
+        )
+        flagsList.add(
+            LayoutInflater.from(this)
+                .inflate(R.layout.thailand_flag, llFlagList, false)
+        )
+
+        addViewsToLayoutFlagList(flagsList)
+    }
+
+    private fun addViewsToLayoutFlagList(flagsList: MutableList<View>) {
+        for (i in flagsList) {
+            llFlagList.addView(i)
+        }
+    }
+
 }
