@@ -26,35 +26,35 @@ class MainActivity : AppCompatActivity() {
         val flagsList = mutableListOf<View>()
         flagsList.add(
             LayoutInflater.from(this)
-                .inflate(R.layout.austria_flag, llFlagList, false)
+                .inflate(layout.austria_flag, llFlagList, false)
         )
         flagsList.add(
             LayoutInflater.from(this)
-                .inflate(R.layout.colombia_flag, llFlagList, false)
+                .inflate(layout.colombia_flag, llFlagList, false)
         )
         flagsList.add(
             LayoutInflater.from(this)
-                .inflate(R.layout.denmark_flag, llFlagList, false)
+                .inflate(layout.denmark_flag, llFlagList, false)
         )
         flagsList.add(
             LayoutInflater.from(this)
-                .inflate(R.layout.italy_flag, llFlagList, false)
+                .inflate(layout.italy_flag, llFlagList, false)
         )
         flagsList.add(
             LayoutInflater.from(this)
-                .inflate(R.layout.madagascar_flag, llFlagList, false)
+                .inflate(layout.madagascar_flag, llFlagList, false)
         )
         flagsList.add(
             LayoutInflater.from(this)
-                .inflate(R.layout.poland_flag, llFlagList, false)
+                .inflate(layout.poland_flag, llFlagList, false)
         )
         flagsList.add(
             LayoutInflater.from(this)
-                .inflate(R.layout.switzerland_flag, llFlagList, false)
+                .inflate(layout.switzerland_flag, llFlagList, false)
         )
         flagsList.add(
             LayoutInflater.from(this)
-                .inflate(R.layout.thailand_flag, llFlagList, false)
+                .inflate(layout.thailand_flag, llFlagList, false)
         )
 
         addViewsToLayoutFlagList(flagsList)
