@@ -2,7 +2,6 @@ package com.example.flags
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flags.R.id
@@ -23,46 +22,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun inflateViews() {
-        val flagsList = mutableListOf<View>()
-        flagsList.add(
-            LayoutInflater.from(this)
-                .inflate(layout.austria_flag, llFlagList, false)
-        )
-        flagsList.add(
-            LayoutInflater.from(this)
-                .inflate(layout.colombia_flag, llFlagList, false)
-        )
-        flagsList.add(
-            LayoutInflater.from(this)
-                .inflate(layout.denmark_flag, llFlagList, false)
-        )
-        flagsList.add(
-            LayoutInflater.from(this)
-                .inflate(layout.italy_flag, llFlagList, false)
-        )
-        flagsList.add(
-            LayoutInflater.from(this)
-                .inflate(layout.madagascar_flag, llFlagList, false)
-        )
-        flagsList.add(
-            LayoutInflater.from(this)
-                .inflate(layout.poland_flag, llFlagList, false)
-        )
-        flagsList.add(
-            LayoutInflater.from(this)
-                .inflate(layout.switzerland_flag, llFlagList, false)
-        )
-        flagsList.add(
-            LayoutInflater.from(this)
-                .inflate(layout.thailand_flag, llFlagList, false)
+        val flagsList = mutableListOf(
+            layout.austria_flag,
+            layout.colombia_flag,
+            layout.denmark_flag,
+            layout.italy_flag,
+            layout.madagascar_flag,
+            layout.poland_flag,
+            layout.switzerland_flag,
+            layout.thailand_flag
         )
 
         addViewsToLayoutFlagList(flagsList)
     }
 
-    private fun addViewsToLayoutFlagList(flagsList: MutableList<View>) {
+    private fun addViewsToLayoutFlagList(flagsList: MutableList<Int>) {
         for (i in flagsList) {
-            llFlagList.addView(i)
+            llFlagList.addView(
+                LayoutInflater.from(this)
+                    .inflate(i, llFlagList, false)
+            )
         }
     }
 
