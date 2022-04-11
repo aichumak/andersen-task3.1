@@ -7,4 +7,20 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="lite_gray">#D0D0D0</color>
+
+    // Flags colors
+    <color name="austria_red">#ED2939</color>
+    <color name="poland_red">#DC143C</color>
+    <color name="italy_green">#009246</color>
+    <color name="italy_red">#CE2B37</color>
+    <color name="colombia_yellow">#FFCD00</color>
+    <color name="colombia_blue">#003087</color>
+    <color name="colombia_red">#C8102E</color>
+    <color name="madagascar_red">#FC3D32</color>
+    <color name="madagascar_green">#007E3A</color>
+    <color name="thailand_red">#A51931</color>
+    <color name="thailand_blue">#2D2A4A</color>
+    <color name="denmark_red">#C60C30</color>
+    <color name="switzerland_red">#FF0000</color>
 </resources>
